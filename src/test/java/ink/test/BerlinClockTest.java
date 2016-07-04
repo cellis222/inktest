@@ -16,8 +16,10 @@ public class BerlinClockTest {
         BerlinClock result = new BerlinClock();
         result.setTime(time);
 
+        // Example conflicts with specification. Have chosen to follow
+        // specification with regards to the second light being lit.
         BerlinClock expected = new BerlinClock()
-                .withSecondsLight(0)
+                .withSecondsLight(1)
                 .withFiveHoursLights(1)
                 .withOneHourLights(4)
                 .withFiveMinutesLights(10)
@@ -32,8 +34,10 @@ public class BerlinClockTest {
         BerlinClock result = new BerlinClock();
         result.setTime(time);
 
+        // Example conflicts with specification. Have chosen to follow
+        // specification with regards to the second light being lit.
         BerlinClock expected = new BerlinClock()
-                .withSecondsLight(1)
+                .withSecondsLight(0)
                 .withFiveHoursLights(3)
                 .withOneHourLights(1)
                 .withFiveMinutesLights(3)
@@ -51,7 +55,7 @@ public class BerlinClockTest {
         BerlinClock expected = new BerlinClock()
                 .withSecondsLight(0)
                 .withFiveHoursLights(4)
-                .withOneHourLights(4)
+                .withOneHourLights(3)
                 .withFiveMinutesLights(11)
                 .withOneMinuteLights(4);
 

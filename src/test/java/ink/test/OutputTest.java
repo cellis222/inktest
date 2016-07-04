@@ -12,7 +12,7 @@ public class OutputTest {
 
     @Test
     public void testConvertClockToString_1() {
-        String expected = "  .\nR...\nRRRR\n----\nYYRYYRYYRY.\nRRRR";
+        String expected = "  Y\nR...\nRRRR\n----\nYYRYYRYYRY.\nRRRR";
 
         LocalTime time = LocalTime.of(9, 54, 50);
         BerlinClock clock = new BerlinClock(time);
@@ -23,7 +23,7 @@ public class OutputTest {
 
     @Test
     public void testConvertClockToString_2() {
-        String expected = "  Y\nRRR.\nR...\n----\nYYR........\nRRR.";
+        String expected = "  .\nRRR.\nR...\n----\nYYR........\nRRR.";
 
         LocalTime time = LocalTime.of(16, 18, 33);
         BerlinClock clock = new BerlinClock(time);

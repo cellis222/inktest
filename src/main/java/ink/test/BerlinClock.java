@@ -20,9 +20,20 @@ public class BerlinClock {
     }
 
     public BerlinClock(LocalTime time) {
+        setTime(time);
     }
 
     public void setTime(LocalTime time) {
+        int hour = time.getHour();
+        fiveHoursLights = hour / 5;
+        oneHourLights = hour % 5;
+
+        int minute = time.getMinute();
+        fiveMinutesLights = minute / 5;
+        oneMinuteLights = minute % 5;
+
+        int second = time.getSecond();
+        secondsLight = 1 - (second % 2);
     }
 
     public int getSecondsLight() {
@@ -127,6 +138,16 @@ public class BerlinClock {
             return false;
         }
         return true;
+    }
+
+    // Auto-generated toString() method
+    @Override
+    public String toString() {
+        return "BerlinClock: {" + "secondsLight=" + secondsLight
+                + ", fiveHoursLights=" + fiveHoursLights +
+                ", oneHourLights=" + oneHourLights +
+                ", fiveMinutesLights=" + fiveMinutesLights +
+                ", oneMinuteLights=" + oneMinuteLights + '}';
     }
 
 }
