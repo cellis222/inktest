@@ -1,6 +1,3 @@
-/*
- * Default License
- */
 package ink.test;
 
 /**

@@ -1,6 +1,3 @@
-/*
- * Default License
- */
 package ink.test;
 
 import java.time.LocalTime;
@@ -18,6 +15,12 @@ public class BerlinClock {
 
     private int fiveMinutesLights = 0;
     private int oneMinuteLights = 0;
+
+    public BerlinClock() {
+    }
+
+    public BerlinClock(LocalTime time) {
+    }
 
     public void setTime(LocalTime time) {
     }
@@ -40,6 +43,47 @@ public class BerlinClock {
 
     public int getOneMinuteLights() {
         return oneMinuteLights;
+    }
+
+    // Setters required for testing
+    public BerlinClock withSecondsLight(int light) {
+        if (light < 0 || light > 1) {
+            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+        }
+        secondsLight = light;
+        return this;
+    }
+
+    public BerlinClock withFiveHoursLights(int lights) {
+        if (lights < 0 || lights > 4) {
+            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+        }
+        fiveHoursLights = lights;
+        return this;
+    }
+
+    public BerlinClock withOneHourLights(int lights) {
+        if (lights < 0 || lights > 4) {
+            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+        }
+        oneHourLights = lights;
+        return this;
+    }
+
+    public BerlinClock withFiveMinutesLights(int lights) {
+        if (lights < 0 || lights > 11) {
+            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+        }
+        fiveMinutesLights = lights;
+        return this;
+    }
+
+    public BerlinClock withOneMinuteLights(int lights) {
+        if (lights < 0 || lights > 4) {
+            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+        }
+        oneMinuteLights = lights;
+        return this;
     }
 
     // Auto-generated hashCode() method
