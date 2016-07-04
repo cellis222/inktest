@@ -10,14 +10,15 @@ import org.junit.Test;
  */
 public class BerlinClockTest {
 
+    // Example conflicts with specification. Have chosen to follow
+    // specification with regards to the second light being lit.
+
     @Test
     public void testSetTime_1() {
         LocalTime time = LocalTime.of(9, 54, 50);
         BerlinClock result = new BerlinClock();
         result.setTime(time);
 
-        // Example conflicts with specification. Have chosen to follow
-        // specification with regards to the second light being lit.
         BerlinClock expected = new BerlinClock()
                 .withSecondsLight(1)
                 .withFiveHoursLights(1)
@@ -34,8 +35,6 @@ public class BerlinClockTest {
         BerlinClock result = new BerlinClock();
         result.setTime(time);
 
-        // Example conflicts with specification. Have chosen to follow
-        // specification with regards to the second light being lit.
         BerlinClock expected = new BerlinClock()
                 .withSecondsLight(0)
                 .withFiveHoursLights(3)

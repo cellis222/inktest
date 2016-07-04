@@ -67,7 +67,7 @@ public class BerlinClock {
 
     public BerlinClock withFiveHoursLights(int lights) {
         if (lights < 0 || lights > 4) {
-            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+            throw new IllegalArgumentException("Five-hour row lights may only take a value between 0 and 4");
         }
         fiveHoursLights = lights;
         return this;
@@ -75,7 +75,7 @@ public class BerlinClock {
 
     public BerlinClock withOneHourLights(int lights) {
         if (lights < 0 || lights > 4) {
-            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+            throw new IllegalArgumentException("One-hour row lights may only take a value between 0 and 4");
         }
         oneHourLights = lights;
         return this;
@@ -83,7 +83,7 @@ public class BerlinClock {
 
     public BerlinClock withFiveMinutesLights(int lights) {
         if (lights < 0 || lights > 11) {
-            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+            throw new IllegalArgumentException("Five-minute row lights may only take a value between 0 and 11");
         }
         fiveMinutesLights = lights;
         return this;
@@ -91,7 +91,7 @@ public class BerlinClock {
 
     public BerlinClock withOneMinuteLights(int lights) {
         if (lights < 0 || lights > 4) {
-            throw new IllegalArgumentException("Second light may only take a value of 0 or 1");
+            throw new IllegalArgumentException("One-minute row lights may only take a value between 0 and 4");
         }
         oneMinuteLights = lights;
         return this;
