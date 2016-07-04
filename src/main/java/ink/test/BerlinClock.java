@@ -24,6 +24,10 @@ public class BerlinClock {
     }
 
     public void setTime(LocalTime time) {
+        if (time == null) {
+            return;
+        }
+
         int hour = time.getHour();
         fiveHoursLights = hour / 5;
         oneHourLights = hour % 5;

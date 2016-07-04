@@ -58,6 +58,13 @@ public class OutputTest {
     }
 
     @Test
+    public void testConvertClockToString_null() {
+        String result = Output.convertClockToString(null);
+
+        Assert.assertEquals(null, result);
+    }
+
+    @Test
     public void testFourValueLine_min() {
         String expected = "....";
         String result = Output.fourValueLine(0, 'X');

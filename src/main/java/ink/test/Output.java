@@ -12,6 +12,10 @@ public class Output {
     }
 
     protected static String convertClockToString(BerlinClock clock) {
+        if (clock == null) {
+            return null;
+        }
+
         StringBuilder result = new StringBuilder()
                 .append("  ");
 

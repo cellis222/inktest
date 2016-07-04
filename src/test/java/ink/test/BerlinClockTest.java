@@ -77,4 +77,19 @@ public class BerlinClockTest {
         Assert.assertEquals(expected, result);
     }
 
+    @Test
+    public void testSetTime_null() {
+        BerlinClock result = new BerlinClock();
+        result.setTime(null);
+
+        BerlinClock expected = new BerlinClock()
+                .withSecondsLight(0)
+                .withFiveHoursLights(0)
+                .withOneHourLights(0)
+                .withFiveMinutesLights(0)
+                .withOneMinuteLights(0);
+
+        Assert.assertEquals(expected, result);
+    }
+
 }
